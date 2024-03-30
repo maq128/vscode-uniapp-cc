@@ -1,0 +1,43 @@
+{
+  "name": "vscode-uniapp-cc",
+  "displayName": "vscode-uniapp-cc",
+  "description": "对 uni-app 项目中条件编译的代码块进行着色处理，以使代码逻辑更清晰易读。",
+  "version": "0.0.1",
+  "publisher": "maq",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maq128/vscode-uniapp-cc.git"
+  },
+  "author": "maq",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:vue",
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:css"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {},
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint \"src/**/*.ts\"",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^16.18.34",
+    "@types/vscode": "^1.73.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "eslint": "^8.26.0",
+    "typescript": "^5.4.2",
+    "vsce": "^2.15.0"
+  }
+}
